@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>AI Diagnosis Penyakit Gigi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+
+<!-- ================= HERO ================= -->
+<header class="bg-gradient-to-r from-blue-700 to-blue-500 text-white">
+  <div class="container mx-auto px-6 py-20 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+      AI Diagnosis Penyakit Gigi
+    </h1>
+    <p class="text-lg md:text-xl mb-8">
+      Sistem cerdas berbasis <span class="font-semibold">Faster R-CNN</span>
+      untuk mendeteksi penyakit gigi dari citra rontgen secara otomatis.
+    </p>
+    <a href="#about"
+       class="bg-white text-blue-700 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition">
+      Pelajari Lebih Lanjut
+    </a>
+  </div>
+</header>
+
+<!-- ================= PROFIL SISTEM ================= -->
+<section id="about" class="py-20">
+  <div class="container mx-auto px-6 md:flex md:items-center md:gap-12">
+    
+    <div class="md:w-1/2">
+      <h2 class="text-3xl font-bold text-blue-700 mb-4">
+        Profil Sistem
+      </h2>
+      <p class="text-gray-700 mb-4 text-justify">
+        Sistem AI Diagnosis Penyakit Gigi ini dikembangkan sebagai media pendukung
+        diagnosis awal bagi tenaga medis dan masyarakat umum. Sistem memanfaatkan
+        teknologi <span class="font-semibold">Deep Learning</span> untuk
+        mengidentifikasi area indikasi penyakit gigi melalui citra rontgen.
+      </p>
+      <p class="text-gray-700 text-justify">
+        Aplikasi berbasis web ini memungkinkan pengguna untuk mengunggah citra,
+        kemudian sistem akan melakukan proses deteksi objek dan memberikan
+        hasil analisis secara cepat, konsisten, dan objektif.
+      </p>
+    </div>
+
+    <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+      <div class="bg-blue-100 w-72 h-72 rounded-xl flex items-center justify-center text-blue-700 font-semibold">
+        Ilustrasi Sistem AI
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FITUR UTAMA ================= -->
+<section class="bg-blue-50 py-20">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-blue-700 mb-10">
+      Fitur Utama Sistem
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Deteksi Otomatis</h3>
+        <p class="text-gray-600">
+          Sistem mampu mendeteksi indikasi penyakit gigi secara otomatis
+          tanpa intervensi manual.
+        </p>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Berbasis Web</h3>
+        <p class="text-gray-600">
+          Dapat diakses kapan saja dan di mana saja melalui browser
+          tanpa instalasi tambahan.
+        </p>
+      </div>
+
+      <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Visualisasi Area Penyakit</h3>
+        <p class="text-gray-600">
+          Menampilkan bounding box pada area gigi yang terdeteksi
+          untuk mempermudah analisis.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= KEUNGGULAN FASTER R-CNN ================= -->
+<section class="py-20">
+  <div class="container mx-auto px-6">
+    
+    <h2 class="text-3xl font-bold text-blue-700 text-center mb-10">
+      Keunggulan Algoritma Faster R-CNN
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Akurasi Tinggi</h3>
+        <p class="text-gray-700 text-justify">
+          Faster R-CNN mampu menghasilkan tingkat akurasi yang tinggi karena
+          menggunakan pendekatan region proposal network (RPN) yang terintegrasi
+          langsung dengan proses klasifikasi dan regresi bounding box.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Deteksi Objek Kompleks</h3>
+        <p class="text-gray-700 text-justify">
+          Algoritma ini efektif dalam mendeteksi objek dengan bentuk dan ukuran
+          yang bervariasi, sehingga sangat sesuai untuk citra medis seperti
+          rontgen gigi.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-2">End-to-End Training</h3>
+        <p class="text-gray-700 text-justify">
+          Faster R-CNN memungkinkan proses pelatihan end-to-end, sehingga
+          meningkatkan efisiensi serta konsistensi hasil deteksi.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Cocok untuk Penelitian Medis</h3>
+        <p class="text-gray-700 text-justify">
+          Algoritma ini banyak digunakan dalam penelitian medis karena
+          kestabilan performa dan kemampuannya dalam menangani dataset
+          beranotasi kompleks.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="bg-blue-700 text-white py-16 text-center">
+  <div class="container mx-auto px-6">
+    <h3 class="text-2xl font-bold mb-4">
+      Coba Diagnosis Gigi Berbasis AI Sekarang
+    </h3>
+    <p class="mb-6">
+      Unggah citra rontgen dan dapatkan hasil analisis secara cepat dan akurat.
+    </p>
+    <a href="#"
+       class="bg-white text-blue-700 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition">
+      Unggah Gambar
+    </a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-blue-900 text-white py-6 text-center text-sm">
+  © 2025 AI Diagnosis Penyakit Gigi – Faster R-CNN
+</footer>
+
+</body>
+</html>

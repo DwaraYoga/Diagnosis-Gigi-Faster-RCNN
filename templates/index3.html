@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>AI Diagnosis Penyakit Gigi</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="static/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="static/css/main.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-blue { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); }
+        section {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800">
+
+    <header class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-blue-100">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600"><a href="">
+                <a href="#" class="flex items-center space-x-2">
+                    <img src="static/icon.png" alt="DentAI Logo" class="h-10 w-auto object-contain transition-transform hover:scale-105">
+                </a>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                <a href="#tentang" class="hover:text-blue-600 transition">Tentang</a>
+                <a href="#fitur" class="hover:text-blue-600 transition">Fitur</a>
+                <a href="#developer" class="hover:text-blue-600 transition">Developer</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- <section class="pt-32 pb-20 gradient-blue">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-blue-600 mb-6">
+                Deteksi Penyakit Gigi
+            </h1>
+            <p class="text-lg text-slate-600 mb-10 leading-relaxed">
+                Platform diagnosis penyakit gigi cerdas untuk membantu identifikasi masalah kesehatan gigi Anda.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#fitur" class="bg-slate-900 text-white px-8 py-3 rounded-md font-medium hover:bg-slate-800 transition">Lihat Keunggulan</a>
+                <a href="/deteksi" class="bg-white text-blue-600 border border-blue-200 px-8 py-3 rounded-md font-medium hover:bg-blue-50 transition">Deteksi Sekarang</a>
+            </div>
+        </div>
+    </section> -->
+    <section class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+    
+        <div id="slide1" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100" 
+            style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070');">
+        </div>
+        <div id="slide2" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" 
+            style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=2070');">
+        </div>
+        <div id="slide3" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" 
+            style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1974');">
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-blue-600 mb-6 drop-shadow-sm">
+                Deteksi Penyakit Gigi
+            </h1>
+            <p class="text-xl text-slate-800 mb-10 leading-relaxed font-medium">
+                Platform diagnosis penyakit gigi cerdas untuk membantu identifikasi masalah kesehatan gigi Anda.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#fitur" class="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition shadow-lg active:scale-95">
+                    Lihat Keunggulan
+                </a>
+                <a href="/deteksi" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200 active:scale-95">
+                    Deteksi Sekarang
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-20 bg-slate-50/50 mt-10">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-sm border border-blue-50 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full -mr-16 -mt-16 opacity-50"></div>
+                
+                <div class="relative z-10 text-center">
+                    <div class="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+                        Latar Belakang
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Tentang Proyek</h2>
+                    
+                    <p class="text-lg md:text-xl text-slate-600 leading-relaxed font-light">
+                        Pengembangan web ini dilatarbelakangi dengan <span class="text-slate-900 font-semibold">banyaknya angka penderita penyakit gigi di Indonesia yang tidak sebanding dengan penanganannya.</span> Web ini diharapkan dapat membantu masyarakat sebagai media awal mengidentifikasi penyakit gigi yang dialami dan penyebaran informasi terkait Kesehatan gigi.
+                    </p>
+
+                    <div class="mt-10 flex justify-center">
+                        <div class="h-1.5 w-24 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fitur" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Keunggulan Utama</h2>
+                <p class="text-slate-500 mt-2">Solusi cerdas untuk pemantauan kesehatan gigi mandiri</p>
+                <div class="w-16 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group p-8 bg-white border border-slate-100 rounded-3xl hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-100/50 transition-all duration-300">
+                    <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Mudah Digunakan</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Antarmuka yang intuitif memungkinkan siapa saja mengunggah foto gigi dan mendapatkan hasil analisis hanya dengan beberapa klik tanpa keahlian teknis.
+                    </p>
+                </div>
+
+                <div class="group p-8 bg-white border border-slate-100 rounded-3xl hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-100/50 transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Deteksi Kapan Saja</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Akses layanan diagnosis 24/7. Tidak perlu menunggu jadwal temu, Anda bisa melakukan pengecekan awal kondisi gigi langsung dari rumah secara instan.
+                    </p>
+                </div>
+
+                <div class="group p-8 bg-white border border-slate-100 rounded-3xl hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-100/50 transition-all duration-300">
+                    <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Fleksibel</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Dapat diakses melalui berbagai perangkat baik smartphone, tablet, maupun komputer. Memberikan keleluasaan dalam memantau kesehatan gigi di mana pun.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="developer" class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 translate-x-1/3 translate-y-1/3"></div>
+
+        <div class="max-w-5xl mx-auto px-4 relative">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Developed By</h2>
+            </div>
+
+            <div class="bg-white rounded-[2rem] shadow-2xl shadow-blue-100/50 overflow-hidden border border-white">
+                <div class="md:flex">
+                    <div class="md:w-2/5 bg-blue-600 relative p-12 flex items-center justify-center overflow-hidden">
+                        <svg class="absolute inset-0 opacity-10 w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="40" stroke="white" stroke-width="2" stroke-dasharray="6 6"/>
+                        </svg>
+                        
+                        <div class="relative z-10 text-center">
+                            <div class="w-40 h-40 mx-auto rounded-2xl rotate-3 bg-white p-2 shadow-2xl transition-transform hover:rotate-0 duration-500">
+                                <img src="static/profil.jpg" alt="Developer" class="rounded-xl w-full h-full object-cover">
+                            </div>
+                            <h3 class="mt-6 text-xl font-bold text-white">DWARA YOGA PRADANA</h3>
+                            <!-- <p class="text-blue-100 text-sm">AI Engineer & Fullstack Dev</p> -->
+                        </div>
+                    </div>
+
+                    <div class="md:w-3/5 p-8 md:p-12">
+                        <div class="inline-flex items-center space-x-2 bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                            <span class="relative flex h-2 w-2">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+                            </span>
+                            <span>Available for Projects</span>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Implementasi Deep Learning untuk Diagnosis Gigi</h3>
+                        <p class="text-slate-600 leading-relaxed mb-8">
+                            Berfokus pada implementasi Deep Learning sebagai media awal diagnosis gigi dan penyebaran informasi. Proyek ini menggabungkan arsitektur <strong>Faster R-CNN</strong> dengan <strong>ResNet50</strong> untuk menghasilkan alat bantu diagnosis gigi bagi masyarakat.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-3 py-1.5 bg-slate-100 text-slate-700 text-xs font-semibold rounded-lg border border-slate-200">Artificial Intelligence</span>
+                            <span class="px-3 py-1.5 bg-slate-100 text-slate-700 text-xs font-semibold rounded-lg border border-slate-200">Web Development</span>
+                            <span class="px-3 py-1.5 bg-slate-100 text-slate-700 text-xs font-semibold rounded-lg border border-slate-200">Python</span>
+                        </div>
+
+                        <hr class="border-slate-100 mb-8">
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex space-x-4">
+                                <!-- GitHub -->
+                                <a href="https://github.com/DwaraYoga" class="p-2 bg-slate-900 text-white rounded-lg hover:bg-blue-600 transition-colors shadow-lg">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.412-4.041-1.412-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                </a>
+                                <!-- LinkedIn -->
+                                <a href="https://www.linkedin.com/in/dwara-yoga-pradana-b03928230/" class="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-all shadow-md">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                </a>
+                            </div>
+                            <a href="https://www.instagram.com/dwarayoga_/" class="text-sm font-bold text-blue-600 hover:underline flex items-center">
+                                Contact Me 
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 grid md:grid-cols-2 gap-6">
+                <div class="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-blue-100 shadow-sm flex items-start space-x-4">
+                    <div class="p-3 bg-blue-600 rounded-lg text-white shadow-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-1">Dosen Pembimbing</h4>
+                        <p class="text-slate-900 font-semibold">Suprapto, M.T., Ph.D</p>
+                        <p class="text-slate-500 text-sm">Departemen Pendidikan Teknik Elektronika dan Informatika</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-blue-100 shadow-sm flex items-start space-x-4">
+                    <div class="p-3 bg-blue-600 rounded-lg text-white shadow-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Program Studi</h4>
+                        <p class="text-slate-900 font-semibold">Teknologi Informasi</p>
+                        <p class="text-slate-500 text-sm">Fakultas Teknik</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-blue-100 shadow-sm flex justify-center items-center space-x-4 mt-2">
+                    <div class="p-3  rounded-lg text-white shadow-lg">
+                        <img src="static/uny.png" 
+                            alt="Logo UNY" 
+                            class="h-20 w-auto object-contain transition-transform hover:scale-110 duration-300">
+                    </div>
+                    <div>
+                        <p class="text-slate-900 font-semibold text-3xl">UNIVERSITAS NEGERI YOGYAKARTA</p>
+                        <!-- <p class="text-slate-700 font-semibold text-xl">Jl. Colombo Yogyakarta No.1, Karang Malang, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281,</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-slate-500 text-sm">
+                &copy; 2025 Dwara Yoga Pradana. Universitas Negeri Yogyakarta.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 3;
+
+        function showNextSlide() {
+            // Sembunyikan slide saat ini
+            document.getElementById(`slide${currentSlide}`).classList.replace('opacity-100', 'opacity-0');
+            
+            // Update index ke slide berikutnya
+            currentSlide = currentSlide % totalSlides + 1;
+            
+            // Tampilkan slide berikutnya
+            document.getElementById(`slide${currentSlide}`).classList.replace('opacity-0', 'opacity-100');
+        }
+
+        // Jalankan setiap 5 detik
+        setInterval(showNextSlide, 5000);
+    </script>
+</body>
+</html>

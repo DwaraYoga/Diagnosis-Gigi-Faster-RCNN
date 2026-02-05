@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google" content="notranslate">
+    <title>AI Diagnosis Penyakit Gigi</title>
+    <link rel="icon" href="static/icon.png" type="image/x-icon">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="static/css/main.css">
+
+  
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #f1f5f9; }
+      ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+      
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+    <header class="pt-32 pb-20 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <span class="inline-block py-1 px-3 rounded-full bg-medical-50 border border-medical-100 text-medical-600 text-xs font-semibold uppercase tracking-wider mb-6">Artificial Intelligence</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+          Deteksi Penyakit Gigi <br/>
+        </h1>
+        <p class="text-lg md:text-xl text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">
+          Platform diagnosis penyakit gigi cerdas untuk membantu identifikasi masalah kesehatan gigi Anda.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button id="mulaiButton" class="px-8 py-4 bg-medical-600 text-white rounded-xl font-semibold shadow-lg shadow-medical-200 hover:bg-medical-700 hover:scale-105 transition-all duration-200">
+            Coba Sekarang
+          </button>
+          <a href="#cara" class="px-8 py-4 bg-white text-slate-600 border border-slate-200 rounded-xl font-semibold hover:bg-slate-50 transition-colors">
+            Pelajari Cara Kerja
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="w-full max-w-6xl mx-auto px-6 pb-20 flex-grow">
+      
+      <section id="cara" class="mb-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-xl font-bold mb-4">1</div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">Unggah Foto</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Pilih foto gigi dengan format JPEG atau PNG yang jelas.</p>
+          </div>
+          <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center text-xl font-bold mb-4">2</div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">Analisis AI</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Sistem kecerdasan buatan kami akan memindai gambar.</p>
+          </div>
+          <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-xl font-bold mb-4">3</div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">Hasil Diagnosis</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Dapatkan laporan deteksi area penyakit beserta saran perawatannya.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contoh" class="mb-20">
+        <h2 class="text-2xl font-bold text-center text-slate-900 mb-10">Contoh Gambar</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+          <div class="bg-white p-4 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+              <img src="static/contoh/contoh1.jpg" alt="contoh 1" class="w-40 h-40 object-cover rounded-lg shadow-md">
+          </div>
+          <div class="bg-white p-4 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+              <img src="static/contoh/contoh2.jpg" alt="contoh 2" class="w-40 h-40 object-cover rounded-lg shadow-md">
+          </div>
+          <div class="bg-white p-4 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+              <img src="static/contoh/contoh3.jpg" alt="contoh 3" class="w-40 h-40 object-cover rounded-lg shadow-md">
+          </div>
+        </div>
+      </section>
+
+      <section id="upload" class="max-w-3xl mx-auto">
+        <div class="glass-panel rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
+          <div class="p-8 md:p-12">
+            <h2 class="text-2xl font-bold text-center text-slate-800 mb-8">Upload Gambar</h2>
+            
+            <form action="/" method="post" enctype="multipart/form-data" id="form">
+              <div class="relative group">
+                <input type="file" id="imageUpload" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" name="file" accept="image/png, image/jpeg, image/jpg"/>
+                <div class="border-2 border-dashed border-slate-300 rounded-2xl p-10 flex flex-col items-center justify-center bg-slate-50 group-hover:bg-medical-50 group-hover:border-medical-400 transition-all duration-300">
+                  <div class="w-16 h-16 bg-white rounded-full shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-medical-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                    </svg>
+                  </div>
+                  <p class="text-lg font-medium text-slate-700">Klik atau seret gambar ke sini</p>
+                  <p class="text-sm text-slate-400 mt-2">Mendukung file JPG & PNG</p>
+                </div>
+              </div>
+
+              <div id="uploadedImage" class="mt-8 hidden animate-fade-in">
+                <div class="bg-slate-100 p-2 rounded-2xl inline-block w-full">
+                  <img id="imagePreview" alt="Preview" class="w-full max-h-80 object-contain rounded-xl shadow-sm mx-auto bg-black/5" src="">
+                </div>
+                <div class="mt-6 text-center">
+                  <button id="prosesButton" class="w-full md:w-auto px-8 py-3 bg-medical-600 text-white rounded-xl font-semibold shadow-lg hover:bg-medical-700 focus:ring-4 focus:ring-medical-200 transition-all" type="submit">
+                    Mulai Proses Deteksi
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <div id="loading" class="hidden fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50">
+        <div class="flex flex-col items-center">
+          <div class="w-16 h-16 border-4 border-medical-200 border-t-medical-600 rounded-full animate-spin mb-4"></div>
+          <p class="text-slate-600 font-medium animate-pulse">Sedang menganalisis...</p>
+        </div>
+      </div>
+
+      {% if img_pred %}
+      <section id="hasil" class="mt-20 scroll-mt-24">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold text-slate-900">Hasil Analisis</h2>
+          <p class="text-slate-500 mt-2">Berikut adalah area yang terdeteksi oleh AI</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
+          
+          <div class="lg:col-span-3 bg-slate-50 p-6 flex items-center justify-center border-b lg:border-b-0 lg:border-r border-slate-100">
+            <div class="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+              <img id="imagePred" alt="Hasil Prediksi" class="w-full h-auto object-cover" src="{{img_pred}}">
+            </div>
+          </div>
+
+          <div class="lg:col-span-2 p-8 lg:max-h-[600px] lg:overflow-y-auto">
+            <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-medical-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              </svg>
+              Laporan Detail
+            </h3>
+
+            <div class="space-y-4">
+              {% if hasil %}
+                {% for cls, details in hasil.items() %}
+                <div class="group bg-white rounded-xl border border-slate-200 p-5 hover:border-medical-300 transition-colors shadow-sm">
+                  <div class="flex items-center justify-between mb-2">
+                    <h4 class="text-lg font-bold text-medical-900">{{ cls.capitalize() }}</h4>
+                    <span class="px-2 py-1 bg-red-50 text-red-600 text-xs font-semibold rounded-md">Terdeteksi</span>
+                  </div>
+                  <div class="space-y-3">
+                    <div>
+                      <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Deskripsi</span>
+                      <p class="text-sm text-slate-700 mt-1 leading-relaxed">{{ details.Deskripsi }}</p>
+                    </div>
+                    <div>
+                      <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Saran Perawatan</span>
+                      <p class="text-sm text-slate-700 mt-1 leading-relaxed">{{ details.Perawatan }}</p>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              {% else %}
+                <div class="flex flex-col items-center justify-center h-40 text-center bg-green-50 rounded-xl border border-green-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <p class="text-green-800 font-medium">Tidak ada penyakit terdeteksi</p>
+                  <p class="text-green-600 text-xs">Gigi tampak sehat.</p>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </section>
+      {% endif %}
+
+    </main>
+
+    <footer class="w-full py-8 bg-white border-t border-slate-100 mt-auto">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+        <p>© 2025 AI Diagnosis Penyakit Gigi.</p>
+        <p class="mt-2 md:mt-0 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+          Hasil ini adalah bantuan diagnosis, konsultasikan dengan dokter gigi.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const imageUpload = document.getElementById("imageUpload");
+      const uploadedImage = document.getElementById("uploadedImage");
+      const imagePreview = document.getElementById("imagePreview");
+      const prosesButton = document.getElementById("prosesButton");
+      const form = document.getElementById("form");
+      const loading = document.getElementById("loading");
+
+      imageUpload.addEventListener("change", function (e) {
+        if (e.target.files && e.target.files[0]) {
+          const file = e.target.files[0];
+          const reader = new FileReader();
+          reader.onload = function (event) {
+            imagePreview.src = event.target.result;
+            uploadedImage.classList.remove("hidden");
+            // Animasi scroll kecil
+            setTimeout(() => {
+                uploadedImage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      document.getElementById('mulaiButton').addEventListener('click', function() {
+        document.getElementById('upload').scrollIntoView({ behavior: 'smooth' });
+      });
+
+      form.addEventListener("submit", function () { 
+        loading.classList.remove("hidden"); 
+      });
+
+      {% if img_pred %}
+      document.addEventListener("DOMContentLoaded", function () {
+        const el = document.getElementById("hasil");
+        if (el) {
+            setTimeout(() => {
+                el.scrollIntoView({ behavior: "smooth" });
+            }, 500); // Sedikit delay agar render selesai
+        }
+      });
+      {% endif %}
+    </script>
+  </body>
+</html>

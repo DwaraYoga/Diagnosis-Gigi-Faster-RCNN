@@ -1,0 +1,15 @@
+# Class names.
+CLASSES: [
+    '__background__',
+    'kalkulus',
+    'karies',
+    'gingivitis',
+    'plak',
+    'abses'
+]
+
+# Number of classes (object classes + 1 for background class in Faster RCNN).
+NC: 6
+
+# Whether to save the predictions of the validation set while training.
+SAVE_VALID_PREDICTION_IMAGES: True

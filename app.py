@@ -63,12 +63,12 @@ def submit():
         pred_results_str = '<br>'.join(pred_results)
 
 
-        return render_template('index.html', 
+        return render_template('index3.html', 
                             hasil=pred_results,
                             img_pred=img_path_pred,
                             label='')
 
-    return render_template('index.html')
+    return render_template('index3.html')
 
 @app.route('/deteksi')
 def load_page():
@@ -79,5 +79,5 @@ def page():
     return render_template('index3.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=4000)
 

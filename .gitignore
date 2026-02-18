@@ -1,6 +1,5 @@
 # Abaikan folder node_modules
 node_modules/
 
-# Abaikan file best_model.pth di root project
-/best_model.pth
-/models/best_model.pth
+# Abaikan file .pth
+*.pth

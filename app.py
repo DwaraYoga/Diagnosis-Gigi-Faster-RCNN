@@ -5,7 +5,6 @@ import cv2
 import torch
 from inference import run_inference
 
-
 app = Flask(__name__)
 
 UPLOAD_FOLDER = 'static/uploads/'
@@ -25,7 +24,11 @@ args = {
     'classes': None
 }
 
-@app.route('/', methods=["GET", "POST"])
+@app.route('/')
+def index():
+    return render_template('index3.html')
+
+@app.route('/deteksi', methods=["GET", "POST"])
 def submit():
     if request.method == "POST":
         img = request.files['file']
@@ -63,21 +66,13 @@ def submit():
         pred_results_str = '<br>'.join(pred_results)
 
 
-        return render_template('index3.html', 
+        return render_template('deteksi.html', 
                             hasil=pred_results,
                             img_pred=img_path_pred,
                             label='')
 
-    return render_template('index3.html')
-
-@app.route('/deteksi')
-def load_page():
     return render_template('deteksi.html')
 
-@app.route('/test')
-def page():
-    return render_template('index3.html')
 
 if __name__ == '__main__':
-    app.run(debug=True, port=4000)
-
+    app.run(debug=True)

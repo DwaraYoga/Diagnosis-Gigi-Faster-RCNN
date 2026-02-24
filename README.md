@@ -25,4 +25,8 @@ npm install
 
 ### 4. Jalankan Project
 
+letakkan file model di folder models
+
+### 5. Jalankan Project
+
 python app.py
